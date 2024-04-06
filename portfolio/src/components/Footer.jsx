@@ -1,17 +1,24 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Box, Link, Text, List, ListItem } from '@chakra-ui/react';
 
 function Footer() {
     return (
-        <footer className="footer">
+        <Box as="footer" className="footer">
             <nav>
-                <ul>
-                    <li><Link to="/aboutMe">About Me</Link></li>
-                    <li><Link to="/projects">Projects</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
-                </ul>
+                <List styleType="none" display="flex" alignItems="center" justifyContent="center">
+                    <ListItem mr="4">
+                        <Link to="/aboutMe">About Me</Link>
+                    </ListItem>
+                    <ListItem mr="4">
+                        <Link to="/projects">Projects</Link>
+                    </ListItem>
+                    <ListItem>
+                        <Link to="/contact">Contact</Link>
+                    </ListItem>
+                </List>
             </nav>
-            <p>&copy; 2024 Team 1 Project 3</p>
-        </footer>
+            <Text textAlign="center">&copy; Lily Vanderbloemen</Text>
+        </Box>
     )
 };
 
